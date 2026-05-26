@@ -13,8 +13,6 @@
       </div>
     </header>
 
-    <DigiohWidget />
-
     <main>
       <RouterView />
     </main>
@@ -28,18 +26,18 @@
 </template>
 
 <script setup>
-import DigiohWidget from './components/DigiohWidget.vue'
 </script>
 
 <style scoped>
+/* display:contents flattens this div so nav/main/footer become
+   direct flex children of body and can be ordered around #digioh-host */
 .app {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  display: contents;
 }
 
 /* Nav */
 .nav {
+  order: 1;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -98,11 +96,13 @@ import DigiohWidget from './components/DigiohWidget.vue'
 
 /* Main */
 main {
+  order: 3;
   flex: 1;
 }
 
 /* Footer */
 .footer {
+  order: 4;
   background: var(--dg-navy);
   color: rgba(255, 255, 255, 0.55);
   font-size: 0.875rem;
