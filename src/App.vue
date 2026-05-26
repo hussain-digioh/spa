@@ -7,7 +7,7 @@
           Digioh QA
         </RouterLink>
         <nav class="nav-links">
-          <RouterLink to="/" class="nav-link" exact-active-class="nav-link--active">Home</RouterLink>
+          <RouterLink to="/home" class="nav-link" active-class="nav-link--active">Home</RouterLink>
           <RouterLink to="/about" class="nav-link" active-class="nav-link--active">About</RouterLink>
         </nav>
       </div>
